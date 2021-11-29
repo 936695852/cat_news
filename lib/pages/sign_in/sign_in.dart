@@ -1,10 +1,12 @@
 import 'package:cat_news/common/api/api.dart';
 import 'package:cat_news/common/entities/entities.dart';
+import 'package:cat_news/common/routes/routes.dart';
 import 'package:cat_news/common/values/values.dart';
 import 'package:cat_news/common/widgets/widgets.dart';
 import 'package:cat_news/global.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -34,7 +36,7 @@ class _SignInPageState extends State<SignInPage> {
 
     UserLoginResponseEntity res = await UserApi.login(params: params);
     Global.saveProfile(res);
-    Navigator.pushNamed(context, '/app');
+    Get.offAndToNamed(AppRoutes.application);
   }
 
   @override
@@ -60,7 +62,7 @@ class _SignInPageState extends State<SignInPage> {
       margin: EdgeInsets.only(bottom: 20.h),
       child: btnFlatButtonWidget(
         onPressed: () {
-          Navigator.pushNamed(context, '/sign-up');
+          Get.toNamed(AppRoutes.signUp);
         },
         width: 294,
         gbColor: AppColors.secondaryElement,

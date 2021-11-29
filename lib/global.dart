@@ -50,6 +50,7 @@ class Global {
 
   // 持久化 用户信息
   static Future<bool> saveProfile(UserLoginResponseEntity userResponse) {
+    isOfflineLogin = true;
     profile = userResponse;
     return StorageUtil().setJSON(storageUserProfileKey, userResponse.toJson());
   }

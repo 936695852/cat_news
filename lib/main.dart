@@ -3,10 +3,30 @@ import 'package:cat_news/global.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
+
+import 'common/providers/providers.dart';
 
 Future<void> main() async {
   await Global.init();
-  runApp(const MyApp());
+  runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider<AppState>(
+          create: (_) => AppState(),
+        ),
+      ],
+      child: Consumer<AppState>(
+        builder: (BuildContext context, appState, Widget? child) {
+          if (appState.isGrayFilter) {
+            return const ColorFiltered(
+              colorFilter: ColorFilter.mode(Colors.white, BlendMode.color),
+              child: MyApp(),
+            );
+          } else {
+            return const MyApp();
+          }
+        },
+      )));
 }
 
 class MyApp extends StatelessWidget {

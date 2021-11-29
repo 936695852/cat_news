@@ -15,9 +15,9 @@ abstract class AppPages {
     GetPage(
       name: AppRoutes.initial,
       page: () => const WelcomePage(),
-      // middlewares: [
-      //   RouteWelcomeMiddleware(),
-      // ],
+      middlewares: [
+        RouteWelcomeMiddleware(),
+      ],
     ),
     GetPage(
       name: AppRoutes.signIn,

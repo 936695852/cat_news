@@ -1,5 +1,5 @@
 // 是否启用缓存
-const cacheEnable = false;
+const cacheEnable = true;
 
 // 缓存的最长时间 单位秒
 const cacheMaxage = 1000;
