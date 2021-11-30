@@ -37,17 +37,6 @@ class _MainPageState extends State<MainPage> {
     _loadLatesWithDiskCache();
   }
 
-  void _loadLatesWithDiskCache() {
-    if (cacheEnable) {
-      var cacheData = StorageUtil().getJSON(storageIndexNewsCacheKey);
-      if (cacheData != null) {
-        Timer(const Duration(seconds: 2), () {
-          _indicatorKey.currentState?.show();
-        });
-      }
-    }
-  }
-
   void _loadAllData() async {
     _categories = await NewsAPI.categories(cacheDisk: true);
     _channels = await NewsAPI.channels(cacheDisk: true);
@@ -58,6 +47,17 @@ class _MainPageState extends State<MainPage> {
 
     if (mounted) {
       setState(() {});
+    }
+  }
+
+  void _loadLatesWithDiskCache() {
+    if (cacheEnable) {
+      var cacheData = StorageUtil().getJSON(storageIndexNewsCacheKey);
+      if (cacheData != null) {
+        Timer(const Duration(seconds: 2), () {
+          _indicatorKey.currentState?.show();
+        });
+      }
     }
   }
 

@@ -1,5 +1,6 @@
 import 'package:cat_news/pages/application/application.dart';
 import 'package:cat_news/pages/category/category.dart';
+import 'package:cat_news/pages/detail/detail.dart';
 import 'package:cat_news/pages/sign_in/sign_in.dart';
 import 'package:cat_news/pages/sign_up/sign_up.dart';
 import 'package:cat_news/pages/welcome/welcome.dart';
@@ -32,6 +33,13 @@ abstract class AppPages {
     GetPage(
       name: AppRoutes.application,
       page: () => const ApplicationPage(),
+      middlewares: [
+        RouteAuthMiddleware(),
+      ],
+    ),
+    GetPage(
+      name: AppRoutes.detail,
+      page: () => const DetailPage(),
       middlewares: [
         RouteAuthMiddleware(),
       ],
