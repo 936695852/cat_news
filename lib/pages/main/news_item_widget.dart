@@ -19,10 +19,14 @@ Widget newsItem(NewsItem item) {
         // 图
         InkWell(
           onTap: () {},
-          child: imageCached(
-            'https://dummyimage.com/121',
+          child: SizedBox(
             width: 121,
             height: 121,
+            child: imageCached(
+              'https://dummyimage.com/121',
+              width: 121,
+              height: 121,
+            ),
           ),
         ),
         // 右侧
@@ -48,7 +52,7 @@ Widget newsItem(NewsItem item) {
               // 标题
               InkWell(
                 onTap: () {
-                  Get.toNamed("/detail/1");
+                  Get.toNamed("/detail/1", arguments: item);
                 },
                 child: Container(
                   margin: EdgeInsets.only(top: 10.h),

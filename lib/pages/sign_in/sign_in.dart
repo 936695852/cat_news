@@ -178,8 +178,8 @@ class _SignInPageState extends State<SignInPage> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
-            height: 76.r,
-            width: 76.r,
+            height: 76.w,
+            width: 76.w,
             margin: EdgeInsets.symmetric(horizontal: 15.w),
             child: Stack(
               alignment: Alignment.center,
@@ -203,7 +203,6 @@ class _SignInPageState extends State<SignInPage> {
                         Radius.circular((76 * 0.5).w),
                       ), // 父容器的50%
                     ),
-                    child: Container(),
                   ),
                 ),
                 Positioned(

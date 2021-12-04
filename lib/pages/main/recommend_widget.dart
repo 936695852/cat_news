@@ -4,6 +4,7 @@ import 'package:cat_news/common/values/values.dart';
 import 'package:cat_news/common/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 Widget recommendWidget(NewsItem item) {
   return Container(
@@ -12,7 +13,9 @@ Widget recommendWidget(NewsItem item) {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         InkWell(
-          onTap: () {},
+          onTap: () {
+            Get.toNamed("/detail/1", arguments: item);
+          },
           child: imageCached(
             'https://dummyimage.com/335x290',
             width: 335,

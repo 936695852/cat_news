@@ -74,11 +74,11 @@ class _ApplicationPageState extends State<ApplicationPage> {
     ),
     BottomNavigationBarItem(
       icon: Icon(
-        Icons.grid_3x3_rounded,
+        Icons.category,
         color: AppColors.tabBarElement,
       ),
       activeIcon: Icon(
-        Icons.grid_3x3_rounded,
+        Icons.category,
         color: AppColors.secondaryElementText,
       ),
       label: 'category',
@@ -86,11 +86,11 @@ class _ApplicationPageState extends State<ApplicationPage> {
     ),
     BottomNavigationBarItem(
       icon: Icon(
-        Icons.catching_pokemon_sharp,
+        Icons.bookmark_added,
         color: AppColors.tabBarElement,
       ),
       activeIcon: Icon(
-        Icons.catching_pokemon_sharp,
+        Icons.bookmark_added,
         color: AppColors.secondaryElementText,
       ),
       label: 'tag',
@@ -98,11 +98,11 @@ class _ApplicationPageState extends State<ApplicationPage> {
     ),
     BottomNavigationBarItem(
       icon: Icon(
-        Icons.face_sharp,
+        Icons.self_improvement,
         color: AppColors.tabBarElement,
       ),
       activeIcon: Icon(
-        Icons.face_sharp,
+        Icons.self_improvement,
         color: AppColors.secondaryElementText,
       ),
       label: 'my',
