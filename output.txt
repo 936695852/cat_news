@@ -1,0 +1,7 @@
+Running "flutter pub get" in cat_news...                         1,086ms
+
+ Building with sound null safety 
+
+Running Gradle task 'assembleRelease'...                        
+Running Gradle task 'assembleRelease'...                           77.1s
+√  Built build\app\outputs\flutter-apk\app-armeabi-v7a-release.apk (13.0MB).

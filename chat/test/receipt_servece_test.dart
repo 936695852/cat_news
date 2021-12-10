@@ -1,4 +1,3 @@
-import 'package:chat/src/models/message.dart';
 import 'package:chat/src/models/receipt.dart';
 import 'package:chat/src/models/user.dart';
 import 'package:chat/src/services/receipt/receipt_service_impl.dart';
