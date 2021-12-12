@@ -3,7 +3,6 @@ enum Typing { start, stop }
 extension TypingParsing on Typing {
   String value() {
     return toString().split('.').last;
-    // ReceiptStatus.sent
   }
 
   static Typing fromString(String status) {
@@ -27,13 +26,13 @@ class TypingEvent {
   Map<String, dynamic> toJson() => {
         'from': from,
         'to': to,
-        'event': event,
+        'event': event.value(),
       };
 
   factory TypingEvent.fromJson(Map<String, dynamic> json) => TypingEvent(
         from: json["from"],
         to: json["to"],
-        event: json["event"],
+        event: TypingParsing.fromString(json["event"]),
         id: json["id"],
       );
 }
