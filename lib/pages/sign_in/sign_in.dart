@@ -41,17 +41,20 @@ class _SignInPageState extends State<SignInPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: Center(
-        child: Column(
-          children: [
-            _buildLogo(),
-            _buildInputForm(),
-            const Spacer(),
-            _buildThirdPartyLogin(),
-            _buildSignupButton(context)
-          ],
+    return GestureDetector(
+      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        body: Center(
+          child: Column(
+            children: [
+              _buildLogo(),
+              _buildInputForm(),
+              const Spacer(),
+              _buildThirdPartyLogin(),
+              _buildSignupButton(context)
+            ],
+          ),
         ),
       ),
     );

@@ -3,7 +3,6 @@ import 'package:cat_news/common/utils/utils.dart';
 import 'package:cat_news/common/values/values.dart';
 import 'package:cat_news/common/widgets/image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
